@@ -1,0 +1,26 @@
+USE custom_db;
+
+CREATE TABLE IF NOT EXISTS Users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255),
+    email VARCHAR(255)
+);
+
+CREATE TABLE IF NOT EXISTS Buses (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    busNumber VARCHAR(50),
+    totalSeats INT,
+    availableSeats INT
+);
+
+CREATE TABLE IF NOT EXISTS Bookings (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    seatNumber INT
+);
+
+CREATE TABLE IF NOT EXISTS Payments (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    amountPaid DECIMAL(10,2),
+    paymentStatus VARCHAR(50)
+);
+SHOW TABLES;
